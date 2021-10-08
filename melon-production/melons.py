@@ -1,5 +1,5 @@
 import robots
-
+from robots import PainterBot
 
 class Melon(object):
     """Melon."""
@@ -31,4 +31,9 @@ class Melon(object):
 
 # FIXME: Add Squash class definition here.
 class Squash(Melon):
-    pass
+    def prep(self):
+        """Prepare the squash."""
+
+        super().prep()
+        robots.painterbot.paint(self)
+    
